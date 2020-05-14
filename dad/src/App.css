@@ -1,0 +1,49 @@
+body {
+  background-color: #d8bfd8;
+  margin: 5%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  font-size: 3.5rem;
+  color: #100b09;
+  width: 85%;
+  margin: 5% auto;
+}
+
+.jokeCard {
+  background-color: seashell;
+  border: 5px double black;
+  margin: 2% 20%;
+  padding: 2%;
+}
+
+p {
+  color: darkblue;
+  font-size: 2rem;
+}
+
+.error {
+  color: darkred;
+  font-size: 4rem;
+}
+
+button {
+  background-color: darkslateblue;
+  color: white;
+  width: 70%;
+  height: 10vh;
+  padding: 1% auto;
+  margin: 4% auto;
+}
+
+img {
+  width: 60%;
+  height: 70vh;
+  border: 3px dotted purple;
+  margin: 2% auto;
+  padding: 2% 5%;
+}
