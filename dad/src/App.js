@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+
 import './App.css';
 
+import Beer from './components/Beer';
+
 function App() {
+  const [beer, setBeer] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get('https://api.punkapi.com/v2/beers/random')
+      .then((response) => {
+        console.log(response);
+        setBeer(response.data);
+      })
+      .catch((error) => console.log('Error with axios call: ', error));
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-header">What's Your Favorite Beer?</h1>
+      {beer.map((drink) => {
+        return (
+          <Beer
+            key={drink.id}
+            name={drink.name}
+            img={drink.image_url}
+            foodPairing={drink.food_pairing}
+          />
+        );
+      })}
     </div>
   );
 }
