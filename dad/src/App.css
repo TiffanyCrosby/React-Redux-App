@@ -1,5 +1,6 @@
 body {
-  background-color: #f0e68c;
+  background-color: #d8bfd8;
+  margin: 5%;
 }
 
 .App {
@@ -7,23 +8,36 @@ body {
 }
 
 .App-header {
-  font-size: 4rem;
+  font-size: 3.5rem;
   color: #100b09;
-  text-decoration: underline;
   width: 85%;
-  margin: 1% auto;
+  margin: 5% auto;
 }
 
-.beerCard {
+.jokeCard {
   background-color: seashell;
   border: 5px double black;
   margin: 2% 20%;
   padding: 2%;
 }
 
-h2 {
-  color: #8b4513;
-  font-size: 2.5rem;
+p {
+  color: darkblue;
+  font-size: 2rem;
+}
+
+.error {
+  color: darkred;
+  font-size: 4rem;
+}
+
+button {
+  background-color: darkslateblue;
+  color: white;
+  width: 70%;
+  height: 10vh;
+  padding: 1% auto;
+  margin: 4% auto;
 }
 
 img {
@@ -32,14 +46,4 @@ img {
   border: 3px dotted purple;
   margin: 2% auto;
   padding: 2% 5%;
-}
-
-h4 {
-  color: #8b4513;
-  font-size: 2rem;
-}
-
-.listItem {
-  color: #808000;
-  font-size: 1.5rem;
 }
